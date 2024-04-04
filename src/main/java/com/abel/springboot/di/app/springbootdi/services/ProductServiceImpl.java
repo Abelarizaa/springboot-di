@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.abel.springboot.di.app.springbootdi.models.Product;
 import com.abel.springboot.di.app.springbootdi.repositories.ProductoRepository;
 
-@Component
+@Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
