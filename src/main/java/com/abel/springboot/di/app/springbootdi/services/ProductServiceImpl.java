@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import com.abel.springboot.di.app.springbootdi.models.Product;
 import com.abel.springboot.di.app.springbootdi.repositories.ProductRepositoryImpl;
 
-public class ProductServiceImpl {
+public class ProductServiceImpl implements ProductService {
 
     private ProductRepositoryImpl repository = new ProductRepositoryImpl();
 
@@ -25,4 +25,5 @@ public class ProductServiceImpl {
 
         return repository.findById(id);
     }
+
 }
