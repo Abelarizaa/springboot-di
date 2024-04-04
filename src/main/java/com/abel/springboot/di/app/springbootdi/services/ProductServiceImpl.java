@@ -3,12 +3,17 @@ package com.abel.springboot.di.app.springbootdi.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.abel.springboot.di.app.springbootdi.models.Product;
-import com.abel.springboot.di.app.springbootdi.repositories.ProductRepositoryImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import com.abel.springboot.di.app.springbootdi.models.Product;
+import com.abel.springboot.di.app.springbootdi.repositories.ProductoRepository;
+
+@Component
 public class ProductServiceImpl implements ProductService {
 
-    private ProductRepositoryImpl repository = new ProductRepositoryImpl();
+    @Autowired
+    private ProductoRepository repository;
 
     public List<Product> findAll(){
         
