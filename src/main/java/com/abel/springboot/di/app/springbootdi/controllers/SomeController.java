@@ -22,6 +22,7 @@ public class SomeController {
     @Autowired
     private ProductService service;
     
+
     @GetMapping
     public List<Product> list(){
         return service.findAll();
